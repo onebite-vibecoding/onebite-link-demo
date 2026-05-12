@@ -12,7 +12,8 @@ export const createClient = (request: NextRequest) => {
     },
   });
 
-  const supabase = createServerClient<unknown, "ob_vibecoding_link">(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const supabase = createServerClient<any, "ob_vibecoding_link">(
     supabaseUrl!,
     supabaseKey!,
     {
